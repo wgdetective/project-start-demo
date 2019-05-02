@@ -3,6 +3,7 @@ package com.wgdetective.projectstartdemo.dbo;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,9 +23,11 @@ public class PersonDbo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "FIRST_NAME")
     @NotNull
     private String firstName;
 
+    @Column(name = "LAST_NAME")
     @NotNull
     private String lastName;
 }
