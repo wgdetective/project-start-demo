@@ -1,0 +1,14 @@
+version: "3.4"
+services:
+    mysql:
+        build:
+          context: ./project-start-mysql
+          dockerfile: Dockerfile
+        image: "project-start-mysql:latest"
+        ports:
+            - 3306:3306
+        volumes:
+            - /opt/docker-volumes/project_start/mysql:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+
